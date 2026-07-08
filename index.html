@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air 경품팡</title>
+    <link rel="stylesheet" href="./styles.css?v=17" />
+  </head>
+  <body>
+    <main class="game-shell" aria-label="경품팡 게임">
+      <section class="phone">
+        <section class="event-copy" aria-label="Air 프로모션">
+          <div class="logo-panel">
+            <img src="./assets/air-logo.png?v=6" alt="air" />
+          </div>
+        </section>
+
+        <header class="hud">
+          <div class="stat">
+            <span>score</span>
+            <strong id="score">0</strong>
+          </div>
+          <button class="icon-button" id="restartIconButton" type="button" aria-label="다시 시작">
+            <span>↻</span>
+          </button>
+        </header>
+
+        <div class="combo-line">
+          <span id="comboText"></span>
+          <span id="bestScore">BEST 0</span>
+        </div>
+
+        <section class="board-wrap">
+          <div class="stars top" aria-hidden="true"></div>
+          <div id="board" class="board" role="grid" aria-label="경품팡 퍼즐 보드"></div>
+          <div class="stars bottom" aria-hidden="true"></div>
+        </section>
+
+        <div class="timer-wrap" aria-label="남은 시간">
+          <div class="timer-bar" id="timerBar"></div>
+        </div>
+
+        <div class="overlay hidden" id="overlay">
+          <div class="modal">
+            <p id="overlayTitle">Time Up</p>
+            <strong id="finalScore">0</strong>
+            <button id="playAgainButton" type="button">다시 시작</button>
+            <button class="share-button modal-share" id="shareButton" type="button">친구에게 공유하기</button>
+            <div class="brand modal-brand">Air와 함께하는 경품팡</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
